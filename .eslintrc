@@ -1,0 +1,47 @@
+{
+  "plugins": ["@typescript-eslint"],
+  "extends": ["airbnb-typescript", "react-app", "plugin:prettier/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["node_modules", "src/"]
+      },
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
+  },
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
+    "no-param-reassign": 0,
+    "react/prop-types": 0,
+    "react/require-default-props": 0,
+    "react/no-array-index-key": ["error"],
+    "react/react-in-jsx-scope": 0,
+    "react/jsx-props-no-spreading": 0,
+    "import/order": 0,
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "no-shadow": 0,
+    "@typescript-eslint/naming-convention": 0,
+    "import/no-cycle": 0,
+    "prefer-destructuring": 0,
+    "import/no-unresolved": [2, { "caseSensitive": false }],
+    "@typescript-eslint/no-unused-vars": ["error"],
+    "prettier/prettier": [
+      2,
+      {
+        "bracketSpacing": true,
+        "printWidth": 80,
+        "singleQuote": true,
+        "trailingComma": "all",
+        "tabWidth": 2,
+        "useTabs": false,
+        "endOfLine": "auto"
+      }
+    ]
+  }
+}
